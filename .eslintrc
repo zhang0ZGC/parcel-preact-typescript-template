@@ -1,0 +1,58 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "standard",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "useJSXTextNode": true
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "sort-class-members"
+  ],
+  "rules": {
+    "react/prop-types": "off",
+    "semi": "off",
+    "object-curly-spacing": "off",
+    "space-before-function-paren": "off",
+    "@typescript-eslint/member-ordering": 2,
+    "sort-class-members/sort-class-members": [0, {
+      "order": [
+        "[static-properties]",
+        "[static-methods]",
+        "[properties]",
+        "constructor",
+        "[conventional-private-properties]",
+        "[methods]",
+        "[conventional-private-methods]"
+      ],
+      "accessorPairPositioning": "getThenSet"
+    }],
+    "no-console": ["warn", {"allow": ["warn", "error"]}],
+    "@typescript-eslint/no-explicit-any": "off"
+  },
+  "settings": {
+    "react": {
+      "pragma": "h",
+      "version": "latest"
+    }
+  }
+}

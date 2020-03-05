@@ -1,0 +1,53 @@
+{
+  "name": "parcel-preact-typescript-template",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url=./ --no-source-maps",
+    "build:test": "cross-env NODE_ENV=test parcel build src/index.html --public-url=./",
+    "lint": "npm run lint:js && npm run lint:style",
+    "lint:js": "eslint --ext .ts,.tsx,.js,.jsx ./src",
+    "lint:style": "stylelint \"src/**/*.scss\"",
+    "clean": "rimraf dist .cache",
+    "postinstall": "npm run clean"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.14.0",
+    "@typescript-eslint/parser": "^2.14.0",
+    "autoprefixer": "^9.7.3",
+    "cross-env": "^7.0.1",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-sort-class-members": "^1.6.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "parcel-bundler": "^1.12.4",
+    "postcss-modules": "^1.4.1",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-pxtorem": "^5.1.1",
+    "rimraf": "^3.0.0",
+    "sass": "^1.24.0",
+    "stylelint": "^13.2.0",
+    "stylelint-config-recess-order": "^2.0.3",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.0.0",
+    "stylelint-scss": "^3.13.0",
+    "typed-css-modules": "^0.6.3",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "@types/node": "^13.1.2",
+    "preact": "^10.1.1",
+    "preact-router": "^3.1.0"
+  },
+  "alias": {
+    "react": "preact/compat",
+    "react-dom/test-utils": "preact/test-utils",
+    "react-dom": "preact/compat"
+  }
+}
