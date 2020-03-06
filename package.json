@@ -4,7 +4,7 @@
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel src/index.html",
+    "start": "parcel src/index.html",
     "build": "parcel build src/index.html --public-url=./ --no-source-maps",
     "build:test": "cross-env NODE_ENV=test parcel build src/index.html --public-url=./",
     "lint": "npm run lint:js && npm run lint:style",
@@ -38,7 +38,7 @@
     "stylelint-order": "^4.0.0",
     "stylelint-scss": "^3.13.0",
     "typed-css-modules": "^0.6.3",
-    "typescript": "^3.7.4"
+    "typescript": "^3.8.3"
   },
   "dependencies": {
     "@types/node": "^13.1.2",
